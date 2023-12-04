@@ -6,6 +6,10 @@
 			var tree = new BinaryTree<int>(new(226));
 			tree.Append(testing_list);
 			tree.Print();
+			var target = 53;
+			Console.WriteLine(target + " Node Existance = " + tree.Contains(target) +".");
+			target = 20;
+			Console.WriteLine(target + " Node Existance = " + tree.Contains(target) +".");
 		}
 	}
 }
