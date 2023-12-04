@@ -25,13 +25,13 @@ namespace Tree
 		}
 		public IEnumerator<Node<D>> GetEnumerator()
 		{
-			// Go through algorythm; (Broadth First Search)
 			var visited = new List<D>();
 			var queue = new Queue<Node<D>>();
 			queue.Enqueue(Root);
 
 
-			while(queue.Count != 0){
+			while(queue.Count != 0)
+			{
 				var current = queue.Dequeue();
 				if(current == null) yield break;
 				if(!visited.Contains(current.Value)){
