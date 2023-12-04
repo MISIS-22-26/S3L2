@@ -19,6 +19,12 @@ namespace Tree
 		public void Append(D[] Values){
 			foreach(var value in Values.Distinct()) Append(value);
 		}
+		public bool Contains(D Target){
+			foreach(var node in this){
+				if(node.Value.CompareTo(Target) == 0) return true;
+			}
+			return false;
+		}
 		public void Print(){
 			foreach(var node in this) Console.Write(node.Value + " ");
 			Console.WriteLine(".");
